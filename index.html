@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor con Mensaje</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+
+  </head>
+<body>
+    <main class="container">
+        <section class="envelope" id="envelope">
+            <div class="letter">
+                <div class="heart" aria-hidden="true"></div>
+                <div class="wax-seal" aria-hidden="true"></div>
+                <div class="letter-content">
+                    <h1>Para Mi Amor</h1>
+                    <p>Haz clic en el botón para descubrir mi mensaje...</p>
+                </div>
+            </div>
+            <div class="message-sheet">
+                <div class="message-content">
+                    <h2>Mi Más Profundo Sentimiento</h2>
+                    <p>Desde el momento en que nuestros caminos se cruzaron, supe que mi vida cambiaría para siempre. Cada día a tu lado es un regalo que atesoro con todo mi corazón.</p>
+                    <p>Tu risa es la melodía que alegra mis días, tu mirada el refugio donde encuentro paz, y tu amor la fuerza que me impulsa a ser mejor.</p>
+                    <p>Prometo amarte en cada amanecer, cuidarte en cada ocaso, y ser tu apoyo en cada paso del camino que decidamos recorrer juntos.</p>
+                    <div class="poem">
+                        <p>"Eres el sueño que nunca quise dejar,</p>
+                        <p>el amor que siempre soñé encontrar,</p>
+                        <p>la razón por la que mi corazón late,</p>
+                        <p>y el destino que elegí abrazar."</p>
+                    </div>
+                    <p class="signature">Con todo mi amor,<br><span>Para siempre tuyo</span></p>
+                </div>
+            </div>
+        </section>
+        <button class="toggle-btn" onclick="toggleEnvelope()">Abrir esta carta de amor</button>
+    </main>
+
+    <script>
+        function toggleEnvelope() {
+            const envelope = document.getElementById('envelope');
+            const btn = document.querySelector('.toggle-btn');
+            envelope.classList.toggle('open');
+            
+            btn.textContent = envelope.classList.contains('open')
+                ? 'Cerrar esta carta de amor'
+                : 'Abrir esta carta de amor';
+        }
+    </script>
+</body>
+</html>

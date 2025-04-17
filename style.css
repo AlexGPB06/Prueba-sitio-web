@@ -1,0 +1,234 @@
+body {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff5f5;
+  margin: 0;
+  padding: 20px;
+  background-image: url('https://transparenttextures.com/patterns/cream-paper.png');
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 320px;
+  background-color: #e8c4c4;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+  margin: 0 auto;
+}
+
+.envelope:hover {
+  transform: translateY(-8px);
+}
+
+.envelope:before,
+.envelope:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50% solid transparent;
+  border-right: 50% solid transparent;
+}
+
+.envelope:before {
+  top: 0;
+  border-top: 160px solid #d8a6a6;
+  z-index: 3;
+  transition: transform 0.6s ease-in-out 0.3s;
+  transform-origin: top;
+}
+
+.envelope.open:before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.envelope:after {
+  bottom: 0;
+  border-bottom: 160px solid #c99393;
+  z-index: 4;
+}
+
+.letter {
+  position: absolute;
+  width: calc(100% - 20px);
+  height: 300px;
+  background-color: #fff9f9;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  transition: transform 0.6s ease-in-out;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  box-sizing: border-box;
+  background-image: url('https://transparenttextures.com/patterns/light-paper-fibers.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope.open .letter {
+  transform: translateY(0px);
+  transition-delay: 0.5s;
+}
+
+.message-sheet {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: 550px;
+  background-color: #fff9f9;
+  left: 20px;
+  top: 330px;
+  z-index: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.8s ease-in-out 0.7s;
+  background-image: url('https://transparenttextures.com/patterns/light-paper-fibers.png');
+}
+
+.envelope.open .message-sheet {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.letter-content,
+.message-content {
+  font-family: 'Dancing Script', cursive;
+  color: #5a3e3e;
+  text-align: center;
+}
+
+.letter-content {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.message-content {
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.message-content h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #8b5a5a;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.poem {
+  font-style: italic;
+  margin: 25px 0;
+  padding: 15px;
+  border-left: 3px solid #e8c4c4;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.signature {
+  margin-top: 30px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+  font-size: 24px;
+}
+
+.signature span {
+  display: block;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.wax-seal {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #c0392b;
+  right: 25px;
+  bottom: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  opacity: 0.9;
+}
+
+.heart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #ff6b6b;
+  transform: rotate(45deg);
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  top: -20px;
+  left: 0;
+}
+
+.heart:after {
+  top: 0;
+  left: -20px;
+}
+
+.toggle-btn {
+  margin-top: 40px;
+  padding: 15px 30px;
+  background-color: #e8c4c4;
+  color: #8b5a5a;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.toggle-btn:hover {
+  background-color: #d8a6a6;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .envelope, .letter, .message-sheet {
+    width: 100% !important;
+    left: 0 !important;
+  }
+}
+
