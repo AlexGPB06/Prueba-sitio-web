@@ -75,3 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
     playBtn.setAttribute('aria-label', 'Reproducir');
   });
 });
+
+    // Inicializar accesibilidad
+    playBtn.setAttribute('aria-label', 'Reproducir');
+  });
+});
