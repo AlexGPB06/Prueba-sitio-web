@@ -8,34 +8,130 @@
     <link rel="stylesheet" href="style_musica.css">
 </head>
 <body>
-    <div class="player-container">
-      <div class="album-art">
-        <!-- Cambia esta línea -->
-        <img src="assest/Imagenes/20250401_085318.jpg" alt="Portada del álbum">
-    </div>
-    
-        
+    <br>
+    <h1 style="justify-self: center;">Canciones chidas</h1>
+    <br>
+    <!-- Reproductor 1 (Blue Velvet) -->
+    <div class="player-container1" id="player1">
+        <div class="album-art">
+          <img src="assest\Imagenes\20250401_085318.jpg" alt="Portada Blue Velvet">
+        </div>
         <div class="song-info">
             <h2>Blue Velvet</h2>
             <p>Dragon Ball GT</p>
-        </div>
-        
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar">
-                <div class="progress" id="progress"></div>
-            </div>
-            <div class="time-info">
-                <span id="currentTime">0:00</span>
-                <span id="duration">0:00</span>
+            <div class="song-description">
+                Tema de apertura de Dragon Ball GT versión en inglés, interpretada por Nattalia Sarria.
             </div>
         </div>
-        
-        <div class="controls">
-            <button class="control-btn play-pause" id="playBtn">
-                <i class="fas fa-play" id="playIcon"></i>
-            </button>
-        </div>
+      <div class="progress-container">
+          <div class="progress-bar">
+              <div class="progress"></div>
+          </div>
+          <div class="time-info">
+              <span class="currentTime">0:00</span>
+              <span class="duration">0:00</span>
+          </div>
+      </div>
+      <div class="controls">
+          <button class="control-btn play-pause">
+              <i class="fas fa-play"></i>
+          </button>
+      </div>
+      <audio src="assest/Musica/Blue Velvet [Dragon Ball GT] - Nattalia Sarria.mp3"></audio>
     </div>
+
+    <!-- Reproductor 2 (The Final Countdown) -->
+    <div class="player-container2" id="player2">
+        <div class="album-art">
+          <img src="assest/Imagenes/20250414_214931.jpg" alt="Portada The Final Countdown">
+        </div>
+        <div class="song-info">
+            <h2>The Final Countdown</h2>
+            <p>Europe</p>
+            <div class="song-description">
+                Éxito mundial de 1986 de la banda sueca Europe, conocido por su distintivo sintetizador.
+            </div>
+        </div>
+      <div class="progress-container">
+          <div class="progress-bar">
+              <div class="progress"></div>
+          </div>
+          <div class="time-info">
+              <span class="currentTime">0:00</span>
+              <span class="duration">0:00</span>
+          </div>
+      </div>
+      <div class="controls">
+          <button class="control-btn play-pause">
+              <i class="fas fa-play"></i>
+          </button>
+      </div>
+      <audio src="assest/Musica/The Final Countdown(MP3_160K).mp3"></audio>
+    </div>
+
+
+    <div class="player-container3" id="player3">
+        <div class="album-art">
+          <img src="assest/Imagenes/20241129_135255.png" alt="Chester">
+        </div>
+        <div class="song-info">
+            <h2>Karate Man (Spanish)</h2>
+            <p>Rhythm Heaven</p>
+            <div class="song-description">
+                Karate man chido de rhythm heaven ds en español chill
+            </div>
+        </div>
+      <div class="progress-container">
+          <div class="progress-bar">
+              <div class="progress"></div>
+          </div>
+          <div class="time-info">
+              <span class="currentTime">0:00</span>
+              <span class="duration">0:00</span>
+          </div>
+      </div>
+      <div class="controls">
+          <button class="control-btn play-pause">
+              <i class="fas fa-play"></i>
+          </button>
+      </div>
+      <audio src="assest/Musica/Karate Man (Spanish) _Kárate Killo_ - Rhythm Heaven Vocal Collection(MP3_128K).mp3"></audio>
+    </div>
+    <br>
+
+
+    <div class="clasePlaylist1" id="Playlist1">
+        <h1 style="text-align: center;">Link de playlist</h1>
+      <br>
+        <div class="contenedor-marcos">
+          <div class="marco">
+            <a href="https://music.youtube.com/playlist?list=PLim6mrEhXg82gFq7LKlu2MxJoy7MS9_Yt&si=41kuuOwVic4tEVjq">
+              <img src="assest/Imagenes/20250404_010945.jpg" alt="Descripción de la imagen">
+            </a>
+            <h2>Título debajo de la imagen</h2>
+          </div>
+      
+          <div class="marco">
+            <a href="https://music.youtube.com/playlist?list=PLim6mrEhXg80rTbat191DxXuf3ONeWmlg&si=HpnwM7qN8kCzs62d">
+              <img src="assest/Imagenes/sandwitch.jpg" alt="Descripción de la imagen">
+            </a>
+            <h2>Título debajo de la imagen</h2>
+          </div>
+      
+          <div class="marco">
+            <a href="https://music.youtube.com/playlist?list=PLim6mrEhXg82gFq7LKlu2MxJoy7MS9_Yt&si=41kuuOwVic4tEVjq">
+              <img src="assest/Imagenes/persona.jpg" alt="Descripción de la imagen">
+            </a>
+            <h2>Título debajo de la imagen</h2>
+          </div>
+        </div>
+      </div>
+<br>
+<br>      
+
+    <script src="app_musica.js"></script>
+</body>
+</html>
 
     <audio id="audio" src="assets/audio/Blue Velvet [Dragon Ball GT] - Nattalia Sarria.mp3"></audio>
 
